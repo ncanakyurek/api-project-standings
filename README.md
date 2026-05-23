@@ -1,6 +1,6 @@
 # ⚽ Süper Lig Standings API
 
-Next.js ile geliştirilmiş canlı Süper Lig puan durumu uygulaması.
+Next.js ile geliştirilmiş dinamik Süper Lig puan durumu uygulaması.
 
 ## 🚀 Özellikler
 
