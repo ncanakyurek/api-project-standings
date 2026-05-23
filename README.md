@@ -38,6 +38,10 @@ npm run dev
 - Düşme hattı
 - Responsive sidebar widget yapısı
 
+## 📷 Preview
+
+![Standings Widget](public/screenshopt.png)
+
 ## 👨‍💻 Geliştirici
 
 Naki Can Akyürek
