@@ -11,7 +11,7 @@ export default function Home() {
     useEffect(() => {
 
         // Backend API'ye istek gönder
-        fetch('/api/livescore')
+        fetch('/api/standings')
 
         // JSON'a çevir
         .then(response => response.json())
