@@ -40,7 +40,7 @@ npm run dev
 
 ## 📷 Preview
 
-![Standings Widget](public/screenshopt.png)
+![Standings Widget](public/screenshot.png)
 
 ## 👨‍💻 Geliştirici
 
