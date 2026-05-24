@@ -1,11 +1,17 @@
 import * as cheerio from 'cheerio';
 import iconv from 'iconv-lite';
 
-export async function GET() {
+export async function GET(request) {
+    // URL parametrelerini al
+    const { searchParams } = new URL(request.url);
+
+    // Lig pageID al
+    const league = searchParams.get('league') || '198';
+    const group = searchParams.get('group');
 
     // Sayfayı çek
     const response = await fetch(
-        'https://www.tff.org/default.aspx?pageID=198'
+        `https://www.tff.org/default.aspx?pageID=${league}${group ? `&grupID=${group}` : ''}`
     );
 
     // Buffer al
