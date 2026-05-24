@@ -28,7 +28,7 @@ export default function Home() {
         <div className="w-full p-2 sm:p-4 bg-gradient-to-b from-gray-50 via-white to-gray-100 flex flex-col items-center">
 
             <div className="w-full max-w-sm mb-3">
-                <div className="bg-gradient-to-r from-blue-500 via-cyan-500 to-sky-500 rounded-2xl shadow-xl p-3 sm:p-4 text-white text-center border border-white/20">
+                <div className="bg-gradient-to-r from-teal-500 to-teal-600 rounded-2xl shadow-xl p-3 sm:p-4 text-white text-center border border-white/20">
                     <span className="text-sm sm:text-base tracking-none font-semibold">2025 - 2026 Sezonu</span>
                     <h1 className="text-2xl sm:text-4xl tracking-none font-extrabold leading-tight">
                         Trendyol Süper Lig
@@ -65,20 +65,20 @@ export default function Home() {
                 <div className="bg-white border border-gray-100 rounded-2xl overflow-hidden">
                     <table className="w-full text-[10px] sm:text-[12px]">
                         <thead>
-                            <tr className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white sticky top-0 z-10 shadow-sm">
-                                <th className="p-1 sm:p-2">#</th>
-                                <th className="p-1 sm:p-2">TAKIMLAR</th>
-                                <th className="p-1 sm:p-2">O</th>
-                                <th className="p-1 sm:p-2">G</th>
-                                <th className="p-1 sm:p-2">B</th>
-                                <th className="p-1 sm:p-2">M</th>
-                                <th className="p-1 sm:p-2">AV</th>
-                                <th className="p-1 sm:p-2">P</th>
+                            <tr className="bg-gradient-to-r from-teal-500 to-teal-600 text-white sticky top-0 z-10 shadow-sm">
+                                <th className="w-[%8] p-1 sm:p-2 text-center">#</th>
+                                <th className="w-[40%] p-1 sm:p-2 pl-3 text-left">TAKIMLAR</th>
+                                <th className="w-[8%] p-1 sm:p-2 pr-4 text-center">O</th>
+                                <th className="w-[8%] p-1 sm:p-2 pr-4 text-center">G</th>
+                                <th className="w-[8%] p-1 sm:p-2 pr-4 text-center">B</th>
+                                <th className="w-[8%] p-1 sm:p-2 pr-4 text-center">M</th>
+                                <th className="w-[%8] p-1 sm:p-2 pr-4 text-center">AV</th>
+                                <th className="w-[14%] p-1 sm:p-2 pr-4 text-center">P</th>
                             </tr>
                         </thead>
                     </table>
 
-                    <div className="max-h-[420px] overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent">
+                    <div className="max-h-90 overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent">
                         <table className="w-full text-[10px] sm:text-[12px]">
                             <tbody>
                                 {standings.map((team, index) => (
@@ -92,7 +92,7 @@ export default function Home() {
                                     >
                                         <td
                                             className={`
-                                                p-1 sm:p-2 text-center font-bold text-gray-700
+                                                w-[8%] p-1 sm:p-2 text-center font-bold text-gray-700
 
                                                 ${index === 0 ? 'border-l-4 border-orange-500' : ''}
                                                 ${index === 1 ? 'border-l-4 border-orange-300' : ''}
@@ -103,12 +103,12 @@ export default function Home() {
                                         >
                                             {team.rank}
                                         </td>
-                                        <td className="p-1 sm:p-2 text-gray-800">
+                                        <td className="w-[40%] p-1 sm:p-2 text-gray-800">
                                             <div className="flex items-center gap-2">
                                                 {team.logo ? (
                                                     <img
                                                         src={team.logo}
-                                                        alt={team.team}
+                                                        alt={`${team.team} logosu`}
                                                         className="w-5 h-5 sm:w-6 sm:h-6 object-contain"
                                                     />
                                                 ) : (
@@ -132,22 +132,22 @@ export default function Home() {
                                                 </span>
                                             </div>
                                         </td>
-                                        <td className="p-1 sm:p-2 text-center text-gray-600">
+                                        <td className="w-[8%] p-1 sm:p-2 text-center text-gray-600">
                                             {team.played}
                                         </td>
-                                        <td className="p-1 sm:p-2 text-center text-gray-600">
+                                        <td className="w-[8%] p-1 sm:p-2 text-center text-gray-600">
                                             {team.wins}
                                         </td>
-                                        <td className="p-1 sm:p-2 text-center text-gray-600">
+                                        <td className="w-[8%] p-1 sm:p-2 text-center text-gray-600">
                                             {team.draws}
                                         </td>
-                                        <td className="p-1 sm:p-2 text-center text-gray-600">
+                                        <td className="w-[8%] p-1 sm:p-2 text-center text-gray-600">
                                             {team.losses}
                                         </td>
-                                        <td className="p-1 sm:p-2 text-center text-gray-600">
+                                        <td className="w-[10%] p-1 sm:p-2 text-center text-gray-600">
                                             {team.average}
                                         </td>
-                                        <td className="p-1 sm:p-2 text-center font-bold text-xs text-blue-600">
+                                        <td className="w-[10%] p-1 sm:p-2 text-center font-bold text-xs text-slate-700">
                                             {team.points}
                                         </td>
                                     </tr>
